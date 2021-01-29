@@ -1,16 +1,7 @@
-:root {
-  --bacckground-color-dark: #2f303a;
-  --main-background-color: #ffffff;
-  --button-background-color: #f5f4fa;
-  --accent-background-color: #2196f3;
-  --color-dark: #212121;
-  --color-grey: #757575;
-  --color-white: #ffffff;
-  --icon-cur-color: #afb1b8;
-}
+@import 'utils/variables';
 body {
-  background-color: var(--main-background-color);
-  font-family: Roboto, sans-serif;
+  background-color: $main-background-color;
+  font-family: $main-ff;
 }
 ul {
   list-style: none;
@@ -46,8 +37,8 @@ p {
   align-items: center;
 }
 .header-logo {
-  color: var(--color-dark);
-  font-family: Raleway, sans-serif;
+  color: $color-dark;
+  font-family: $seconadary-ff;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
@@ -55,7 +46,7 @@ p {
   margin-right: 93px;
 }
 .header-web {
-  color: var(--accent-background-color);
+  color: $accent-background-color;
 }
 .main-nav {
   display: flex;
@@ -70,7 +61,7 @@ p {
 
 .nav-link {
   position: relative;
-  color: var(--color-dark);
+  color: $color-dark;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -81,7 +72,7 @@ p {
 }
 .nav-link:hover,
 .nav-link:focus {
-  color: var(--accent-background-color);
+  color: $accent-background-color;
 }
 .address {
   display: flex;
@@ -93,7 +84,7 @@ p {
   margin-right: 10px;
 }
 .nav-link.current {
-  color: var(--accent-background-color);
+  color: $accent-background-color;
 }
 .nav-link.current::after {
   position: absolute;
@@ -103,11 +94,11 @@ p {
   display: block;
   width: 100%;
   height: 4px;
-  background-color: var(--accent-background-color);
+  background-color: $accent-background-color;
   border-radius: 2px;
 }
 .address-mail {
-  color: var(--color-grey);
+  color: $color-grey;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -121,14 +112,14 @@ p {
 }
 .address-mail:hover,
 .address-mail:focus {
-  color: var(--accent-background-color);
+  color: $accent-background-color;
 }
 .address-icon-tel {
   margin-right: 10px;
   fill: currentColor;
 }
 .address-tel {
-  color: var(--color-grey);
+  color: $color-grey;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -141,7 +132,7 @@ p {
 }
 .address-tel:hover,
 .address-tel:focus {
-  color: var(--accent-background-color);
+  color: $accent-background-color;
 }
 
 /* Hero styles*/
@@ -150,7 +141,7 @@ p {
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
-  background-color: var(--bacckground-color-dark);
+  background-color: $bacckground-color-dark;
   background-image: linear-gradient(
       to right,
       rgba(47, 48, 58, 0.4),
@@ -165,13 +156,12 @@ p {
   flex-direction: column;
 }
 .hero {
-  /* background-color: var(--bacckground-color-dark); */
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
 }
 .hero-title {
-  color: var(--color-white);
+  color: $color-white;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -179,8 +169,8 @@ p {
   text-transform: uppercase;
 }
 .hero-btn {
-  background-color: var(--accent-background-color);
-  color: var(--color-white);
+  background-color: $accent-background-color;
+  color: $color-white;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.9;
@@ -198,15 +188,14 @@ p {
 }
 .hero-btn:hover,
 .hero-btn:focus {
-  background-color: var(--color-white);
-  color: var(--accent-background-color);
+  background-color: $color-white;
+  color: $accent-background-color;
 }
 /*преимущества*/
 .feat-icon-spec {
   display: flex;
   justify-content: center;
-  background-color: var(--button-background-color);
-  /* margin-top: 94px; */
+  background-color: $button-background-color;
   margin-bottom: 30px;
 }
 .feature-icon-sputnik {
@@ -228,7 +217,7 @@ p {
 }
 
 .feature-title {
-  color: var(--color-dark);
+  color: $color-dark;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -236,7 +225,7 @@ p {
   text-transform: uppercase;
 }
 .feature-text {
-  color: var(--color-grey);
+  color: $color-grey;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.7;
@@ -252,7 +241,7 @@ p {
   justify-content: space-between;
 }
 .work-title {
-  color: var(--color-dark);
+  color: $color-dark;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
@@ -273,7 +262,7 @@ p {
 .label {
   width: 370px;
   padding: 27px 0px;
-  color: var(--main-background-color);
+  color: $main-background-color;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.17;
@@ -295,10 +284,10 @@ p {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-  background-color: var(--main-background-color);
+  background-color: $main-background-color;
 }
 .team {
-  color: var(--color-dark);
+  color: $color-dark;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
@@ -307,7 +296,7 @@ p {
   margin-bottom: 50px;
 }
 .team-memb {
-  color: var(--color-dark);
+  color: $color-dark;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -316,7 +305,7 @@ p {
   margin-top: 30px;
 }
 .team-pstn {
-  color: var(--color-grey);
+  color: $color-grey;
   font-weight: normal;
   font-size: 16px;
   line-height: 1.19;
@@ -340,7 +329,7 @@ p {
   align-items: center;
 
   border-radius: 50%;
-  color: var(--icon-cur-color);
+  color: $icon-cur-color;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -356,8 +345,8 @@ p {
 }
 .social-icon-link:hover,
 .social-icon-link:focus {
-  color: var(--main-background-color);
-  background-color: var(--accent-background-color);
+  color: $main-background-color;
+  background-color: $accent-background-color;
 }
 
 /* OUR CLIENTS */
@@ -367,7 +356,7 @@ p {
 }
 
 .clients-head {
-  color: var(--color-dark);
+  color: $color-dark;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
@@ -388,15 +377,15 @@ p {
   border-radius: 4px;
   width: 170px;
   height: 90px;
-  fill: var(--icon-cur-color);
+  fill: $icon-cur-color;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link:hover,
 .clients-link:focus {
-  border: 1px solid var(--accent-background-color);
-  fill: var(--accent-background-color);
+  border: 1px solid $accent-background-color;
+  fill: $accent-background-color;
 }
 /* MODAL  */
 .backdrop {
@@ -422,7 +411,7 @@ p {
   left: 50%;
   width: 528px;
   height: 581px;
-  background-color: var(--main-background-color);
+  background-color: $main-background-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -437,19 +426,19 @@ p {
   height: 30px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  background: var(--main-background-color);
+  background: $main-background-color;
   cursor: pointer;
 }
 .modal-name {
   margin-top: 40px;
   margin-bottom: 12px;
-  font-family: Roboto;
+  font-family: $main-ff;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--color-dark);
+  color: $color-dark;
 }
 .field {
   width: 448px;
@@ -479,21 +468,21 @@ p {
 .input:focus,
 .input:hover {
   outline: none;
-  border-color: var(--accent-background-color);
+  border-color: $accent-background-color;
 }
 .input:focus + .modal-icon,
 .input:hover + .modal-icon {
-  fill: var(--accent-background-color);
+  fill: $accent-background-color;
 }
 .name {
   margin-bottom: 4px;
-  font-family: Roboto;
+  font-family: $main-ff;
 
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
-  color: var(--color-grey);
+  color: $color-grey;
 }
 .username {
   margin-bottom: 10px;
@@ -520,10 +509,10 @@ textarea {
 textarea:focus,
 textarea:hover {
   outline: none;
-  border-color: var(--accent-background-color);
+  border-color: $accent-background-color;
 }
 textarea::placeholder {
-  font-family: Roboto;
+  font-family: $main-ff;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.14;
@@ -533,8 +522,7 @@ textarea::placeholder {
 .check {
   text-align: center;
   margin-bottom: 30px;
-  /* outline: 1px solid black; */
-  font-family: Roboto;
+  font-family: $main-ff;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
@@ -553,7 +541,7 @@ textarea::placeholder {
 }
 .conditions {
   text-decoration: underline;
-  color: var(--accent-background-color);
+  color: $accent-background-color;
 }
 .check-label {
   display: inline-flex;
@@ -573,14 +561,14 @@ textarea::placeholder {
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .box:focus + .check-label::before {
-  border: 2px solid var(--accent-background-color);
+  border: 2px solid $accent-background-color;
 }
 .box:checked ~ .check-label::before {
-  background-color: var(--accent-background-color);
+  background-color: $accent-background-color;
   background-image: url('../images/check.svg');
   background-size: contain;
   background-origin: border-box;
-  border-color: var(--accent-background-color);
+  border-color: $accent-background-color;
 }
 .btn-send {
   display: flex;
@@ -591,13 +579,13 @@ textarea::placeholder {
   padding: 0;
   width: 200px;
   height: 50px;
-  background-color: var(--accent-background-color);
-  font-family: Roboto;
+  background-color: $accent-background-color;
+  font-family: $main-ff;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
-  color: var(--main-background-color);
+  color: $main-background-color;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: none;
@@ -607,8 +595,8 @@ textarea::placeholder {
 }
 .btn-send:hover,
 .btn-send:focus {
-  background-color: var(--color-white);
-  color: var(--accent-background-color);
+  background-color: $color-white;
+  color: $accent-background-color;
 }
 
 /*Footer*/
@@ -618,14 +606,14 @@ textarea::placeholder {
 }
 
 .footer {
-  background-color: var(--bacckground-color-dark);
+  background-color: $bacckground-color-dark;
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
 .logo-footer {
-  color: var(--color-white);
-  font-family: Raleway, sans-serif;
+  color: $color-white;
+  font-family: $seconadary-ff;
   font-style: normal;
   font-weight: 700;
   font-size: 26px;
@@ -635,11 +623,11 @@ textarea::placeholder {
   display: block;
 }
 .web-footer {
-  color: var(--accent-background-color);
+  color: $accent-background-color;
 }
 
 .foot-address-coord {
-  color: var(--color-white);
+  color: $color-white;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -666,8 +654,8 @@ textarea::placeholder {
 }
 
 .subscribe-title {
-  color: var(--color-white);
-  font-family: Roboto;
+  color: $color-white;
+  font-family: $main-ff;
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
@@ -692,12 +680,12 @@ textarea::placeholder {
   border-radius: 50%;
   width: 44px;
   height: 44px;
-  fill: var(--color-white);
+  fill: $color-white;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .foot-links:hover,
 .foot-links:focus {
-  background-color: var(--accent-background-color);
+  background-color: $accent-background-color;
 }
 .subscribe-field {
   display: flex;
@@ -713,20 +701,20 @@ textarea::placeholder {
   padding-top: 15px;
   padding-bottom: 15px;
   width: 358px;
-  color: var(--main-background-color);
+  color: $main-background-color;
 }
 .subscribe-form {
   display: inline-flex;
   margin-left: 93px;
 }
 .subscribe-label {
-  font-family: Roboto;
+  font-family: $main-ff;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--main-background-color);
+  color: $main-background-color;
   margin-bottom: 20px;
 }
 .btn-submit {
@@ -738,13 +726,13 @@ textarea::placeholder {
   padding: 0;
   width: 200px;
   height: 50px;
-  background-color: var(--accent-background-color);
-  font-family: Roboto;
+  background-color: $accent-background-color;
+  font-family: $main-ff;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
-  color: var(--main-background-color);
+  color: $main-background-color;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: none;
@@ -759,11 +747,11 @@ textarea::placeholder {
 }
 .btn-submit:hover,
 .btn-submit:focus {
-  background-color: var(--color-white);
-  color: var(--accent-background-color);
+  background-color: $color-white;
+  color: $accent-background-color;
 }
 .btn-submit:hover .btn-icon {
-  fill: var(--accent-background-color);
+  fill: $accent-background-color;
 }
 
 /*Портфолио, Кнопки фильтров*/
@@ -784,8 +772,8 @@ textarea::placeholder {
   display: block;
 }
 .filt-btn {
-  background-color: var(--button-background-color);
-  color: var(--color-dark);
+  background-color: $button-background-color;
+  color: $color-dark;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.6;
@@ -801,8 +789,8 @@ textarea::placeholder {
 }
 .filt-btn:hover,
 .filt-btn:focus {
-  background-color: var(--accent-background-color);
-  color: var(--color-white);
+  background-color: $accent-background-color;
+  color: $color-white;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 /*Портфолио, карточки*/
@@ -813,7 +801,7 @@ textarea::placeholder {
   justify-content: space-between;
 }
 .cards-title {
-  color: var(--color-dark);
+  color: $color-dark;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -838,7 +826,7 @@ textarea::placeholder {
 }
 
 .cards-text {
-  color: var(--color-grey);
+  color: $color-grey;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.9;
@@ -872,7 +860,7 @@ textarea::placeholder {
   font-size: 18px;
   line-height: 1.5;
   letter-spacing: 0.03em;
-  color: var(--main-background-color);
+  color: $main-background-color;
   text-align: left;
   padding: 63px 24px;
 }
