@@ -319,11 +319,6 @@ p {
   pointer-events: none;
 }
 
-.backdrop.is-hidden .modal {
-  -webkit-transform: translate(-50%, -50%) scale(0.9);
-          transform: translate(-50%, -50%) scale(0.9);
-}
-
 .modal {
   position: absolute;
   top: 50%;
@@ -340,6 +335,11 @@ p {
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden .modal {
+  -webkit-transform: translate(-50%, -50%) scale(0.9);
+          transform: translate(-50%, -50%) scale(0.9);
 }
 
 .modal__button {
@@ -366,25 +366,8 @@ p {
   color: #212121;
 }
 
-.field {
-  width: 448px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .input-cont {
   position: relative;
-}
-
-.modal-icon {
-  position: absolute;
-  left: 12px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  fill: currentColor;
-  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .input {
@@ -398,10 +381,20 @@ p {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.input:focus,
-.input:hover {
+.input:focus, .input:hover {
   outline: none;
   border-color: #2196f3;
+}
+
+.modal-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  fill: currentColor;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .input:focus + .modal-icon,
@@ -419,14 +412,14 @@ p {
   color: #757575;
 }
 
-.username {
-  margin-bottom: 10px;
+.field {
+  width: 448px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.phonenum {
-  margin-bottom: 10px;
-}
-
+.username,
+.phonenum,
 .mail {
   margin-bottom: 10px;
 }
@@ -446,8 +439,7 @@ textarea {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-textarea:focus,
-textarea:hover {
+textarea:focus, textarea:hover {
   outline: none;
   border-color: #2196f3;
 }
@@ -499,7 +491,7 @@ textarea::placeholder {
   color: #757575;
 }
 
-.box {
+.check__box {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -510,18 +502,21 @@ textarea::placeholder {
   overflow: hidden;
 }
 
-.conditions {
-  text-decoration: underline;
-  color: #2196f3;
-}
-
 .check-label {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.check-label .conditions {
+  text-decoration: underline;
+  color: #2196f3;
 }
 
 .check-label::before {
@@ -537,11 +532,11 @@ textarea::placeholder {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-image 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.box:focus + .check-label::before {
+.check__box:focus + .check-label::before {
   border: 2px solid #2196f3;
 }
 
-.box:checked ~ .check-label::before {
+.check__box:checked ~ .check-label::before {
   background-color: #2196f3;
   background-image: url("../images/check.svg");
   background-size: contain;
@@ -553,12 +548,12 @@ textarea::placeholder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-right: auto;
   margin-left: auto;
   padding: 0;
@@ -580,8 +575,7 @@ textarea::placeholder {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.btn-send:hover,
-.btn-send:focus {
+.btn-send:hover, .btn-send:focus {
   background-color: #ffffff;
   color: #2196f3;
 }
@@ -734,12 +728,12 @@ textarea::placeholder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 35px;
   margin-left: 12px;
   padding: 0;

@@ -7,14 +7,12 @@
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
 }
-.backdrop.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-}
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0.9);
-}
+
 .modal {
   position: absolute;
   top: 50%;
@@ -27,6 +25,9 @@
   border-radius: 4px;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(0.9);
+  }
 }
 .modal__button {
   position: absolute;
@@ -50,21 +51,9 @@
   letter-spacing: 0.03em;
   color: $color-dark;
 }
-.field {
-  width: 448px;
-  margin-left: auto;
-  margin-right: auto;
-}
+
 .input-cont {
   position: relative;
-}
-.modal-icon {
-  position: absolute;
-  left: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-  fill: currentColor;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .input {
   width: 100%;
@@ -74,32 +63,41 @@
   border-radius: 4px;
   cursor: pointer;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus,
+  &:hover {
+    outline: none;
+    border-color: $accent-background-color;
+  }
 }
-.input:focus,
-.input:hover {
-  outline: none;
-  border-color: $accent-background-color;
+.modal-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: currentColor;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  .input:focus + &,
+  .input:hover + & {
+    fill: $accent-background-color;
+  }
 }
-.input:focus + .modal-icon,
-.input:hover + .modal-icon {
-  fill: $accent-background-color;
-}
+
 .name {
   margin-bottom: 4px;
   font-family: $main-ff;
-
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: $color-grey;
 }
-.username {
-  margin-bottom: 10px;
+.field {
+  width: 448px;
+  margin-left: auto;
+  margin-right: auto;
 }
-.phonenum {
-  margin-bottom: 10px;
-}
+.username,
+.phonenum,
 .mail {
   margin-bottom: 10px;
 }
@@ -115,20 +113,21 @@ textarea {
   height: 120px;
   cursor: pointer;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus,
+  &:hover {
+    outline: none;
+    border-color: $accent-background-color;
+  }
+  &::placeholder {
+    font-family: $main-ff;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
 }
-textarea:focus,
-textarea:hover {
-  outline: none;
-  border-color: $accent-background-color;
-}
-textarea::placeholder {
-  font-family: $main-ff;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
-}
+
 .check {
   text-align: center;
   margin-bottom: 30px;
@@ -139,7 +138,7 @@ textarea::placeholder {
   letter-spacing: 0.03em;
   color: #757575;
 }
-.box {
+.check__box {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -149,13 +148,13 @@ textarea::placeholder {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-.conditions {
-  text-decoration: underline;
-  color: $accent-background-color;
-}
+
 .check-label {
-  display: inline-flex;
-  align-items: center;
+  @include centeredFlex(inline-flex);
+  .conditions {
+    text-decoration: underline;
+    color: $accent-background-color;
+  }
 }
 .check-label::before {
   content: '';
@@ -169,21 +168,20 @@ textarea::placeholder {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-image 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  .check__box:focus + & {
+    border: 2px solid $accent-background-color;
+  }
+  .check__box:checked ~ & {
+    background-color: $accent-background-color;
+    background-image: url('../images/check.svg');
+    background-size: contain;
+    background-origin: border-box;
+    border-color: $accent-background-color;
+  }
 }
-.box:focus + .check-label::before {
-  border: 2px solid $accent-background-color;
-}
-.box:checked ~ .check-label::before {
-  background-color: $accent-background-color;
-  background-image: url('../images/check.svg');
-  background-size: contain;
-  background-origin: border-box;
-  border-color: $accent-background-color;
-}
+
 .btn-send {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include centeredFlex();
   margin-right: auto;
   margin-left: auto;
   padding: 0;
@@ -202,9 +200,9 @@ textarea::placeholder {
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.btn-send:hover,
-.btn-send:focus {
-  background-color: $color-white;
-  color: $accent-background-color;
+  &:hover,
+  &:focus {
+    background-color: $color-white;
+    color: $accent-background-color;
+  }
 }
