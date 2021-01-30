@@ -302,6 +302,62 @@ p {
   padding-right: 15px;
 }
 
+.features {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.features__list > .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.features__item {
+  -ms-flex-preferred-size: calc(100% / 4 - 30px);
+      flex-basis: calc(100% / 4 - 30px);
+}
+
+.feat-icon-spec {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f5f4fa;
+  margin-bottom: 30px;
+}
+
+.feature-icon {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.feature-title {
+  color: #212121;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.feature-text {
+  color: #757575;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  margin-top: 10px;
+}
+
 .work {
   padding-bottom: 94px;
 }
@@ -1191,61 +1247,6 @@ textarea::placeholder {
 }
 
 /*преимущества*/
-.feat-icon-spec {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: #f5f4fa;
-  margin-bottom: 30px;
-}
-
-.feature-icon-sputnik {
-  margin-top: 25px;
-  margin-bottom: 25px;
-}
-
-.features-list {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
-.features > .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  /* margin-top: 94px;
-  margin-bottom: 94px; */
-}
-
-.feat-item {
-  -ms-flex-preferred-size: calc(100% / 4 - 30px);
-      flex-basis: calc(100% / 4 - 30px);
-}
-
-.feature-title {
-  color: #212121;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-}
-
-.feature-text {
-  color: #757575;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.7;
-  letter-spacing: 0.03em;
-  margin-top: 10px;
-}
-
 /* Чем мы занимаемся*/
 /* Наша команда*/
 /* OUR CLIENTS */

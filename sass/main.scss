@@ -2,6 +2,7 @@
 @import './utils/variables';
 @import './base/defaults';
 @import './utils/mixins';
+@import './components/features';
 @import './components/works';
 @import './components/team';
 @import './components/ourClients';
@@ -174,46 +175,6 @@
   color: $accent-background-color;
 }
 /*преимущества*/
-.feat-icon-spec {
-  display: flex;
-  justify-content: center;
-  background-color: $button-background-color;
-  margin-bottom: 30px;
-}
-.feature-icon-sputnik {
-  margin-top: 25px;
-  margin-bottom: 25px;
-}
-.features-list {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-.features > .container {
-  display: flex;
-  justify-content: space-between;
-  /* margin-top: 94px;
-  margin-bottom: 94px; */
-}
-.feat-item {
-  flex-basis: calc(100% / 4 - 30px);
-}
-
-.feature-title {
-  color: $color-dark;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-}
-.feature-text {
-  color: $color-grey;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.7;
-  letter-spacing: 0.03em;
-  margin-top: 10px;
-}
 /* Чем мы занимаемся*/
 /* Наша команда*/
 /* OUR CLIENTS */
