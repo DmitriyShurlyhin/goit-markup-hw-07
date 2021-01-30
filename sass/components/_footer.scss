@@ -9,13 +9,8 @@
 }
 
 .logo {
+  @extend %logo;
   color: $color-white;
-  font-family: $seconadary-ff;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
   margin-bottom: 20px;
   display: block;
   &--web {
@@ -35,7 +30,7 @@
 .foot-address-tel {
   display: block;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
