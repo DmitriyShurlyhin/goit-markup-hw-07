@@ -2,6 +2,7 @@
 @import './utils/variables';
 @import './base/defaults';
 @import './utils/mixins';
+@import './components/team';
 @import './components/ourClients';
 @import './components/modal';
 @import './components/footer';
@@ -250,85 +251,6 @@
   text-align: center;
 }
 /* Наша команда*/
-.team-block {
-  padding-bottom: 94px;
-  padding-top: 94px;
-  background-color: #e5e5e5;
-}
-.team-sec {
-  display: flex;
-  justify-content: space-between;
-}
-.team-item {
-  display: block;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
-  background-color: $main-background-color;
-}
-.team {
-  color: $color-dark;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  letter-spacing: 0.03em;
-  margin-bottom: 50px;
-}
-.team-memb {
-  color: $color-dark;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
-  text-align: center;
-  margin-top: 30px;
-}
-.team-pstn {
-  color: $color-grey;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 16px;
-}
-
-.social-icon {
-  display: inline-flex;
-}
-.social-icon:not(:last-child) {
-  margin-right: 10px;
-}
-.social-icon-link {
-  width: 44px;
-  height: 44px;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-
-  border-radius: 50%;
-  color: $icon-cur-color;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.team-icon {
-  fill: currentColor;
-}
-.team-social-icons {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 30px;
-  margin-left: 32px;
-  margin-right: 32px;
-}
-.social-icon-link:hover,
-.social-icon-link:focus {
-  color: $main-background-color;
-  background-color: $accent-background-color;
-}
-
 /* OUR CLIENTS */
 /* MODAL  */
 /*Footer*/
