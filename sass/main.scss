@@ -2,6 +2,7 @@
 @import './utils/variables';
 @import './base/defaults';
 @import './utils/mixins';
+@import './components/ourClients';
 @import './components/modal';
 @import './components/footer';
 
@@ -329,43 +330,6 @@
 }
 
 /* OUR CLIENTS */
-.clients {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
-.clients-head {
-  color: $color-dark;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  letter-spacing: 0.03em;
-  margin-bottom: 50px;
-}
-
-.clients-icon {
-  display: flex;
-  justify-content: space-between;
-}
-.clients-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
-  width: 170px;
-  height: 90px;
-  fill: $icon-cur-color;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.clients-link:hover,
-.clients-link:focus {
-  border: 1px solid $accent-background-color;
-  fill: $accent-background-color;
-}
 /* MODAL  */
 /*Footer*/
 
